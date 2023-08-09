@@ -5,9 +5,13 @@ document.addEventListener("click", (clickEvent) => {
     const detailsHtml = `
     <div>
       <h4>Greeting:</h4>
+      <p>${greeting}</p>
       <h4>School:</h4>
+      <p>${school}</p>
       <h4>Study Book:</h4>
+      <p>${study_book}</p>
     </div>`;
+    return detailsHtml
   }
 });
 
@@ -18,3 +22,4 @@ export const TypeList = () => {
   headerHtml += `</div>`;
   return headerHtml;
 };
+
