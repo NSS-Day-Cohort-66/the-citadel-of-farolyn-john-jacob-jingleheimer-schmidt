@@ -1,3 +1,5 @@
+import { getSchools } from "./database.js";
+
 document.addEventListener("click", (clickEvent) => {
   const schoolClicked = clickEvent.target;
 
@@ -12,10 +14,22 @@ document.addEventListener("click", (clickEvent) => {
   }
 });
 
-export const SchoolList = () => {
-  let headerHtml = `<div id="schools_container" class="content_block">`;
-  headerHtml += `<h3>Magic Schools:</h3>`;
+// Automate HTML listing schools
 
-  headerHtml += `</div>`;
+
+export const SchoolList = () => {
+  const schools = getSchools()
+  
+  let headerHtml = `<div id="schools_container" class="content_block">`;
+  
+  for (const school of schools) {
+    headerHtml += `<h3>Magic Schools:</h3>
+                  <ul>
+                  <li>${school.name}</li>
+                  </ul>`
+  
+                }
+    headerHtml += `</div>`;
+                
   return headerHtml;
 };
