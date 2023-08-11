@@ -12,8 +12,6 @@ document.addEventListener("click", (clickEvent) => {
       </div>
     `;
   }
-
-return detailsHtml
 });
 
 // Automate HTML listing schools
@@ -28,7 +26,7 @@ export const SchoolList = () => {
   
   for (const school of schools) {
                   headerHtml += `<ul>
-                  <li>${school.name}</li>
+                  <li data-type="school">${school.name}</li>
                   </ul>`
   
                 }
