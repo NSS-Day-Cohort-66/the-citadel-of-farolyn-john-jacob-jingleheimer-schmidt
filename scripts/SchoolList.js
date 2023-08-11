@@ -14,8 +14,10 @@ document.addEventListener("click", (clickEvent) => {
   }
 });
 
-// Automate HTML listing schools
 
+// Automate HTML listing schools
+const displayMessage = document.querySelector("#message");
+  displayMessage.innerHTML = detailsHtml
 
 export const SchoolList = () => {
   const schools = getSchools()
