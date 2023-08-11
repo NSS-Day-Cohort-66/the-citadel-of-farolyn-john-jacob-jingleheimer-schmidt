@@ -22,12 +22,13 @@ return detailsHtml
 export const SchoolList = () => {
   const schools = getSchools()
   
-  let headerHtml = `<div id="schools_container" class="content_block">`;
+  let headerHtml = `<div id="schools_container" class="content_block">
+                      <h3>Magic Schools:</h3>`;
+  
   
   for (const school of schools) {
-    headerHtml += `<h3>Magic Schools:</h3>
-                  <ul>
-                  <li data-type="school">${school.name}</li>
+                  headerHtml += `<ul>
+                  <li>${school.name}</li>
                   </ul>`
   
                 }
